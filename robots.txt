@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /.git/
+Allow: /
+
+Sitemap: https://www.rootcodetechnology.com/sitemap.xml

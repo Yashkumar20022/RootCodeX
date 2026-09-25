@@ -1,35 +1,37 @@
 
 
 import { useState } from "react";
-// import svg as URL to ensure bundler returns a usable path
+// codeverse icon imported as URL (keeps existing behavior)
 import codeverseIcon from "../codeverse-icon-v2.svg?url";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sd-header">
-      <nav className="sd-nav">
-        <div className="sd-brand">
-          <svg role="img" aria-label="RootCode Technology logo" width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <circle cx="6" cy="18" r="2.4" fill="#3FD6C0" />
-            <circle cx="18" cy="6" r="2.4" fill="#FF7A59" />
-            <circle cx="18" cy="18" r="2.4" fill="#8B6CFF" />
-            <path d="M8 17 L16 7" stroke="#332C57" strokeWidth="1.4" />
-            <path d="M8.5 18 L16 18" stroke="#332C57" strokeWidth="1.4" />
-          </svg>
-          RootCode Technology
-          <img src={codeverseIcon} alt="codeverse" className="sd-codeverse-icon" />
+    <header className="sd-header sd-header-fancy">
+      <nav className="sd-nav sd-nav-fancy">
+        <div className="sd-brand sd-brand-fancy">
+          <a className="sd-brand-link" href="https://www.rootcodetechnology.com" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+            <span className="sd-logo-badge" aria-hidden>
+              <img src="/RootCodex-logo.png" alt="" className="sd-brand-logo" />
+            </span>
+            <div className="sd-brand-text">
+              <span className="sd-brand-title">Root<span className="sd-brand-accent">CodeX</span></span>
+              <span className="sd-brand-sub">rootcodetechnology.com</span>
+            </div>
+          </a>
         </div>
-        <div className={`sd-nav-links ${menuOpen ? "sd-open" : ""}`}>
+
+        <div className={`sd-nav-links ${menuOpen ? "sd-open" : ""} sd-nav-links-fancy`}>
           <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>Process</a>
-          <a href="#contact" className="sd-nav-cta" onClick={() => setMenuOpen(false)}>
-            Get a quote
+          <a href="#contact" className="sd-nav-cta sd-nav-cta-large" onClick={() => setMenuOpen(false)}>
+            Contact Now
           </a>
         </div>
+
         <button className="sd-menu-btn" onClick={() => setMenuOpen((o) => !o)} aria-label="Menu">
           ☰
         </button>

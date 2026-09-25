@@ -1,3 +1,7 @@
+import ServiceIcon3D from './ServiceIcon3D.jsx';
+
+
+
 export default function Footer() {
   return (
     <footer className="sd-footer">
@@ -5,17 +9,15 @@ export default function Footer() {
         <div className="sd-footer-grid">
             <div className="sd-foot-col sd-foot-brand">
             <div className="sd-brand">
-              <svg role="img" aria-label="RootCode Technology logo" width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <circle cx="6" cy="18" r="2.4" fill="#3FD6C0" />
-                <circle cx="18" cy="6" r="2.4" fill="#FF7A59" />
-                <circle cx="18" cy="18" r="2.4" fill="#8B6CFF" />
-                <path d="M8 17 L16 7" stroke="#332C57" strokeWidth="1.4" />
-                <path d="M8.5 18 L16 18" stroke="#332C57" strokeWidth="1.4" />
-              </svg>
-              <div>
-                <div style={{ fontWeight: 700 }}>RootCode Technology</div>
-                <div className="sd-foot-tag">Grow Your Digital Roots</div>
-              </div>
+              <a href="https://www.rootcodetechnology.com" target="_blank" rel="noopener noreferrer" className="sd-foot-link">
+                <div>
+                  <div className="sd-brand-text" style={{ lineHeight: 1 }}>
+                    <span className="sd-brand-title">Root<span className="sd-brand-accent">CodeX</span></span>
+                    <div className="sd-brand-sub">rootcodetechnology.com</div>
+                  </div>
+                  <div className="sd-foot-tag">Grow Your Digital Roots</div>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -47,7 +49,7 @@ export default function Footer() {
             <div className="sd-foot-contact">
               <div>Gondia, Nagpur, Maharashtra</div>
               <div>
-                <a href="tel:+91934924939">+91 934924939</a>
+                <a href="tel:+919834924939">+91 98349 24939</a>
               </div>
               <div>
                 <a href="mailto:bagyashkumar@gmail.com">bagyashkumar@gmail.com</a>
@@ -57,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="sd-foot-row" style={{ marginTop: 22 }}>
-          <span>© 2026 RootCode Technology. All rights reserved.</span>
+          <span>© 2026 <span className="sd-brand-title" style={{ fontSize: '1rem' }}>Root<span className="sd-brand-accent">CodeX</span></span>. All rights reserved.</span>
           <span>Websites · Apps · Digital Marketing</span>
         </div>
       </div>
