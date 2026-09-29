@@ -3,13 +3,16 @@ import ServiceIcon3D from './ServiceIcon3D.jsx';
 
 
 export default function Footer() {
+  // Vite doesn't expose `process.env` in the browser — use import.meta.env.BASE_URL
+  const baseUrl = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) ? import.meta.env.BASE_URL : '/';
+
   return (
     <footer className="sd-footer">
       <div className="sd-wrap">
         <div className="sd-footer-grid">
             <div className="sd-foot-col sd-foot-brand">
             <div className="sd-brand">
-              <a href="https://www.rootcodetechnology.com" target="_blank" rel="noopener noreferrer" className="sd-foot-link">
+              <a href={baseUrl} target="_blank" rel="noopener noreferrer" className="sd-foot-link">
                 <div>
                   <div className="sd-brand-text" style={{ lineHeight: 1 }}>
                     <span className="sd-brand-title">Root<span className="sd-brand-accent">CodeX</span></span>
